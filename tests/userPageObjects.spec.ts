@@ -30,3 +30,12 @@ test("parametrized methods", async ({ page }) => {
     await pm.onFormLayoutsPage().submitInlineFormWithNameEmailAndCheckbox(randomFullName, randomEmail, true);
    
 })
+
+
+test("CI test", async ({ page }) => {
+    const pm = new PageManager(page);
+
+    await pm.navigateTo().formLayoutsPage();
+    await pm.navigateTo().datepickerPage();
+   
+})
